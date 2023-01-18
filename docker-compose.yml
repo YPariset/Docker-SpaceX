@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  react:
+    container_name: react-spaceX
+    image: 'node:latest'
+    working_dir: /home/SpaceX-Project/
+    command: 
+      - /bin/sh
+      - '-c'
+      - 'npm install && npm start'
+    ports: 
+      - 3000:3000
+    volumes:
+      - './SpaceX-Project:/home/SpaceX-Project/'
